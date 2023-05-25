@@ -36,9 +36,9 @@ function App() {
     <div className="App">
       <Navbar />
       <div className="container">
-        <CountriesList countries={countries} />
-     
-
+        <div className="row">
+          <CountriesList countries={countries} />
+        </div>
         <Routes>
           <Route
             path="/:id"
@@ -46,6 +46,7 @@ function App() {
           />
         </Routes>
       </div>
+     
     </div>
   );
 }
