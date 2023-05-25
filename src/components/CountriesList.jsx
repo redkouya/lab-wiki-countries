@@ -6,12 +6,12 @@ function CountriesList({ countries }) {
     <div >
       {countries.map((eachCountry) => {
         return (
-          <Link to={eachCountry.alpha3Code}>
+          <Link key={eachCountry._id} to={eachCountry.alpha3Code}>
             <div className="card">
              
               <img
                 src={`${url}${eachCountry.alpha2Code.toLowerCase()}.png`}
-                alt={eachCountry._id}
+                alt={eachCountry.name.common}
                 width={60}
               />
                <h5>{eachCountry.name.common}</h5>
