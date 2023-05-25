@@ -2,7 +2,7 @@
 
 function Navbar() {
   return (
-    <div><h2>Navbar</h2></div>
+    <div><h2>Ironhack Countries</h2></div>
   )
 }
 
