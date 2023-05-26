@@ -8,26 +8,17 @@ function CountryDetails({ countries }) {
   const [countryDetails, setCountryDetails] = useState(undefined);
   const url = 'https://flagpedia.net/data/flags/icon/72x54/';
   const urlCountry = ' https://ih-countries-api.herokuapp.com/countries/';
-  const getCountry = () => {
-    // console.log("getCountry",id)
-    const filterArray = countries.filter(
-      (eachCountry) => eachCountry.alpha3Code.toString() === id
-    );
-    const getData = async () => {
-      try {
-        const response = await axios.get(urlCountry + id);
-        setCountryDetails(response.data);
-      } catch (err) {
-        console.log(err);
-      }
-    };
 
-    console.log('filterArray', filterArray);
-    return filterArray[0];
+  const getData = async () => {
+    try {
+      const response = await axios.get(urlCountry + id)   
+      setCountryDetails(response.data);
+    } catch (err) {
+      console.log(err);
+    }
   };
-  useEffect(() => {
-    console.log('getCountry()', getCountry());
-    setCountryDetails(getCountry());
+  useEffect(() => {    
+    getData();
   }, [id]); // se ejecutara cuando cambie la url
 
   if (countryDetails === undefined) {
