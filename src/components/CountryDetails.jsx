@@ -62,7 +62,7 @@ function CountryDetails({ countries }) {
                 {countryDetails.borders.map((eachBorder) => (
                   <li>
                    
-                    <Link to={`/${eachBorder}`}>{eachBorder}</Link>
+                    <Link  to={`/${eachBorder}`}>{eachBorder}</Link>
                   </li>
                 ))}
               </ul>

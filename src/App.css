@@ -1,16 +1,10 @@
 .App {
   text-align: center;
 }
-.container{
-  display: flex;
-  justify-content: space-between;
-}
 
-.card{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
 li{
   list-style: none;
+}
+img{
+  margin:auto;
 }

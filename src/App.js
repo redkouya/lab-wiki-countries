@@ -38,13 +38,14 @@ function App() {
       <div className="container">
         <div className="row">
           <CountriesList countries={countries} />
-        </div>
+        
         <Routes>
           <Route
             path="/:id"
             element={<CountryDetails countries={countries} />}
           />
         </Routes>
+        </div>
       </div>
      
     </div>

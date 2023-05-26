@@ -3,10 +3,11 @@ import { Link } from 'react-router-dom';
 function CountriesList({ countries }) {
   const url = 'https://flagpedia.net/data/flags/icon/72x54/';
   return (
-    <div >
+    <div className="col-5" style={{maxHeight: "90vh", overflow: "scroll"}}>
+
       {countries.map((eachCountry) => {
         return (
-          <Link key={eachCountry._id} to={eachCountry.alpha3Code}>
+          <Link className="list-group-item list-group-item-action active" key={eachCountry._id} to={eachCountry.alpha3Code}>
             <div className="card">
              
               <img
@@ -19,6 +20,7 @@ function CountriesList({ countries }) {
           </Link>
         );
       })}
+      
     </div>
   );
 }
