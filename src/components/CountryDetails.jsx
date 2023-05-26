@@ -34,14 +34,14 @@ function CountryDetails({ countries }) {
     return <div>Esperando detalles de país</div>;
   }
   return (
-    <div class="col-7">
+    <div className="col-7">
       <h1>{countryDetails.name.common}</h1>
       <img
         src={`${url}${countryDetails.alpha2Code.toLowerCase()}.png`}
         alt={countryDetails.name.common}
         width={150}
       />
-      <table class="table">
+      <table className="table">
         <thead></thead>
         <tbody>
           <tr>
